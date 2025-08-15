@@ -325,28 +325,7 @@ class PerformanceOptimizer {
         images.forEach(img => imageObserver.observe(img));
     }
 
-    optimizeScrolling() {
-        let ticking = false;
-
-        function updateScrollEffects() {
-            // Parallax effect for hero section
-            const scrolled = window.pageYOffset;
-            const heroSection = document.querySelector('.hero-section');
-            
-            if (heroSection) {
-                heroSection.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-
-            ticking = false;
-        }
-
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(updateScrollEffects);
-                ticking = true;
-            }
-        });
-    }
+    
 }
 
 // Inicialização quando o DOM estiver carregado
