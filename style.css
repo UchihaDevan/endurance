@@ -20,7 +20,7 @@ body {
 
 /* Header de alerta */
 .alert-header {
-    background-color: #b85450;
+    background-color: #D72638;
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -132,6 +132,9 @@ body {
 .hero-section {
     text-align: center;
     margin-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .main-title {
@@ -183,6 +186,7 @@ body {
 .intro-image img {
     width: 500px;
     border-radius: 10px;
+    margin-top: 80px;
 }
 
 /* Seção de benefícios */
@@ -254,7 +258,7 @@ body {
 }
 
 .highlight-box {
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    background: linear-gradient(135deg, #8B1E2E, #F85F73);
     color: white;
     padding: 30px;
     border-radius: 15px;
@@ -399,7 +403,7 @@ body {
 }
 
 .pricing-header {
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    background: linear-gradient(135deg, #8B1E2E, #F85F73);
     color: white;
     padding: 20px;
     text-align: center;
@@ -444,7 +448,7 @@ body {
 }
 
 .upgrade-btn {
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    background: linear-gradient(135deg, #8B1E2E, #F85F73);
     color: white;
     border: none;
     padding: 15px 30px;
@@ -603,7 +607,7 @@ body {
 }
 
 .final-upgrade-btn {
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    background: linear-gradient(135deg, #8B1E2E, #F85F73);
     color: white;
     border: none;
     padding: 20px 40px;

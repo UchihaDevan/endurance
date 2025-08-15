@@ -143,7 +143,7 @@ body {
 }
 
 .highlight {
-    color: #ff6b35;
+    color: #8B1E2E;
     font-weight: bold;
 }
 
@@ -173,7 +173,7 @@ body {
 
 .intro-text blockquote {
     background-color: #f8f9fa;
-    border-left: 4px solid #ff6b35;
+    border-left: 4px solid #8B1E2E;
     padding: 20px;
     margin: 20px 0;
     font-style: italic;
@@ -225,7 +225,7 @@ body {
 }
 
 .benefit-card h3 {
-    color: #ff6b35;
+    color: #8B1E2E;
     margin-bottom: 15px;
     font-size: 1.3rem;
 }
@@ -249,7 +249,7 @@ body {
 }
 
 .highlight-box {
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    background: linear-gradient(135deg, #8B1E2E, #F85F73);
     color: white;
     padding: 30px;
     border-radius: 15px;
@@ -332,7 +332,7 @@ body {
     border-radius: 10px;
     padding: 30px;
     margin: 30px 0;
-    border-left: 4px solid #ff6b35;
+    border-left: 4px solid #8B1E2E;
 }
 
 /* Seção de preços */
@@ -379,12 +379,12 @@ body {
 }
 
 .pricing-card.featured {
-    border-color: #ff6b35;
+    border-color: #8B1E2E;
     transform: scale(1.05);
 }
 
 .pricing-header {
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    background: linear-gradient(135deg, #8B1E2E, #F85F73);
     color: white;
     padding: 20px;
     text-align: center;
@@ -412,7 +412,7 @@ body {
 .price {
     font-size: 3rem;
     font-weight: bold;
-    color: #ff6b35;
+    color: #8B1E2E;
     margin-bottom: 10px;
 }
 
@@ -429,7 +429,7 @@ body {
 }
 
 .upgrade-btn {
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    background: linear-gradient(135deg, #8B1E2E, #F85F73);
     color: white;
     border: none;
     padding: 15px 30px;
@@ -564,7 +564,7 @@ body {
 .urgency-questions li {
     font-size: 1.2rem;
     margin-bottom: 15px;
-    color: #ff6b35;
+    color: #8B1E2E;
     font-weight: 500;
 }
 
@@ -588,7 +588,7 @@ body {
 }
 
 .final-upgrade-btn {
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    background: linear-gradient(135deg, #8B1E2E, #F85F73);
     color: white;
     border: none;
     padding: 20px 40px;
@@ -643,7 +643,7 @@ body {
 .footer-content h3 {
     font-size: 1.5rem;
     margin-bottom: 20px;
-    color: #ff6b35;
+    color: #8B1E2E;
 }
 
 .footer-content p {
@@ -656,7 +656,7 @@ body {
 }
 
 .contact-info h4 {
-    color: #ff6b35;
+    color: #8B1E2E;
     margin-bottom: 15px;
 }
 
@@ -769,7 +769,7 @@ body {
 .upgrade-btn:focus,
 .final-upgrade-btn:focus,
 .decline-btn:focus {
-    outline: 2px solid #ff6b35;
+    outline: 2px solid #8B1E2E;
     outline-offset: 2px;
 }
 
