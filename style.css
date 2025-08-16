@@ -5,6 +5,13 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -414,8 +421,7 @@ body {
 
 .benefit-card img {
     width: 100%;
-    height: 280px;
-
+    height: 320px;
     border-radius: 20px;
     margin-top: 20px;
 }
