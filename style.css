@@ -319,7 +319,7 @@ body {
     background-color: #CF272A;
     width: 100%;
     height: 100%;
-    padding: 40px 20%;
+    padding: 40px 20px;
 }
 
 .main-title {
@@ -633,12 +633,19 @@ body {
     position: relative;
 }
 
+.right-price-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
 .right-price-content img {
     margin: 0 auto;
     display: block;
     width: 100%;
     max-width: 200px;
-    margin-right: 60px;
+    margin-right: 10px;
 }
 
 .price {
@@ -730,28 +737,30 @@ body {
 }
 
 .guarantee-item h3 {
-    color: #28a745;
+    color: #333;
     margin-bottom: 10px;
     font-size: 1.3rem;
 }
 
 .guarantee-text {
-    background-color: #d4edda;
-    border: 1px solid #c3e6cb;
+    background-color: white;
+    border: 1px solid #dedede;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.384);
     border-radius: 10px;
     padding: 30px;
     margin-top: 30px;
 }
 
 .guarantee-text h3 {
-    color: #155724;
+    color: #333;
     margin-bottom: 15px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .guarantee-text p {
-    color: #155724;
+    color: #333;
     margin-bottom: 15px;
+    font-size: 18px;
 }
 
 /* Seção de bônus */
@@ -767,7 +776,7 @@ body {
 }
 
 .bonus-content {
-    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    background: linear-gradient(135deg, #8B1E2E, #F85F73);
     color: white;
     padding: 40px;
     border-radius: 15px;
@@ -776,7 +785,7 @@ body {
 }
 
 .bonus-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -784,6 +793,7 @@ body {
 .bonus-content p {
     margin-bottom: 15px;
     line-height: 1.6;
+    font-size: 18px;
 }
 
 .bonus-details {
