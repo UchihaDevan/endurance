@@ -6,12 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Endurance Prime - Special Offer</title>
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://assets.mycartpanda.com/cartx-ecomm-ui-assets/js/libs/ocu-external.js">
+    </script>
+
+    <script>
+        new OcuExternal();
+    </script>
 </head>
 
 <body>
     <!-- Alert header -->
     <div class="alert-header">
-        <div class="alert-content">
+        <div class="alert-content" style="max-width: 1200px; margin: 0 auto;">
             <h2 class="alert-icon">⚠️</h2>
             <h3 class="alert-text">Wait! <strong>Your order</strong> has not been completed yet! Do not close this page
                 or you may generate duplicate
@@ -55,13 +62,13 @@
                 <div class="step">My Order</div>
             </div>
 
-            <h1 class="main-title">
+            <h1 class="main-title" style="max-width: 1200px;">
                 Discover how to unclog the veins in your penis
                 and regain <span style="color: #7CB342;">steel-hard erections</span> in just <span
                     style="color: #7CB342;">3
                     months</span> (instead of 6).
             </h1>
-            <img src="./assets/imgs/3.png" alt="" width="70%">
+            <img src="./assets/imgs/3.png" alt="" width="70%" style="max-width: 900px;">
         </section>
         <div class="container">
 
@@ -208,69 +215,80 @@
                 </div>
 
                 <div class="pricing-cards">
+                    <!-- Card de 2 frascos -->
                     <div class="pricing-card">
                         <div class="pricing-header">
                             <div class="save-badge">SAVE €98</div>
                         </div>
                         <div class="pricing-content">
-                            <img src="./assets/imgs/varant.png" alt="" class="varant-img" width="100px"
-                                style="position: absolute; top: 10px; left: 25px; z-index: 10;">
-                            <div class="right-price-content">
-                                <img src="./assets/imgs/1.png" alt=""
-                                    style="position: absolute; top: 20px; left: 25px;">
-                                <img src="./assets/imgs/1.png" alt="" style="margin-top: 20px; margin-right: 25px;">
-                                <div class="shipping-info-container" style="margin-top: 25px;"><img
-                                        src="./assets/imgs/shipping.gif" alt=""
+                            <div class="middle-container-card">
+                                <img src="./assets/imgs/varant.png" alt="" class="varant-img" width="100px">
+                                <img src="./assets/imgs/2bottles.png" alt="" class="bottle2-image">
+                                <div class="price-container">
+                                    <div class="price">€147</div>
+                                    <div class="price-description">for 2 bottles</div>
+                                    <div class="original-price">Regular Price €245</div>
+                                    <button class="upgrade-btn" id="upgrade-2-bottles-final">
+                                        Yes! Upgrade My Order
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="bottom-container-card">
+                                <div class="shipping-info-container">
+                                    <img src="./assets/imgs/shipping.gif" alt=""
                                         style="width: 30px; margin-right: 10px;">
                                     <p class="shipping-info">FREE shipping</p>
                                 </div>
-                            </div>
-                            <div class="left-price-content">
-                                <div class="price">€147</div>
-                                <div class="price-description">for 2 jars</div>
-                                <div class="original-price">Regular Price €245</div>
-                                <button class="upgrade-btn">Yes! Upgrade My Order</button>
-                                <div class="guarantee-container"><img src="./assets/imgs/varant-icon.png" alt=""
-                                        width="40px">
-                                    <p class="shipping-info" style="margin-right: 40px;">180 Days Guarantee</p>
+                                <div class="guarantee-container">
+                                    <img src="./assets/imgs/varant-icon.png" alt="" width="40px">
+                                    <p class="shipping-info">180 Days Guarantee</p>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
 
+                    <!-- Card de 6 frascos -->
                     <div class="pricing-card featured">
                         <div class="pricing-header">
                             <div class="save-badge">SAVE €196</div>
                         </div>
                         <div class="pricing-content">
-                            <img src="./assets/imgs/varant.png" alt="" class="varant-img" width="100px"
-                                style="position: absolute; top: 10px; left: 25px; z-index: 10;">
-                            <div class="right-price-content">
-                                <img src="./assets/imgs/2.png" alt="" style="margin-bottom: 40px; margin-right: 40px;">
-                                <img src="./assets/imgs/2.png" alt="" style="position: absolute; top: 60px;">
-                                
-                            </div>
-                            <div class="left-price-content">
-                                <div class="price">€197</div>
-                                <div class="price-description">for 6 bottles</div>
-                                <div class="original-price">Regular Price €393</div>
-                                <button class="upgrade-btn">Yes! Upgrade My Order</button>
-                                <div class="guarantee-container">
-                                    <img src="./assets/imgs/varant-icon.png" alt="" width="40px">
-                                    <p class="shipping-info" style="margin-right: 40px;">180 Days Guarantee</p>
+                            <div class="middle-container-card">
+                                <img src="./assets/imgs/varant.png" alt="" class="varant-img" width="100px">
+                                <div class="right-price-content">
+                                    <img src="./assets/imgs/3.png" alt="" style="max-width: 250px;">
+                                </div>
+                                <div class="price-container">
+                                    <div class="price">€197</div>
+                                    <div class="price-description">for 6 bottles</div>
+                                    <div class="original-price">Regular Price €393</div>
+                                    <button class="upgrade-btn" id="upgrade-6-bottles-final">
+                                        Yes! Upgrade My Order
+                                    </button>
                                 </div>
                             </div>
 
-
+                            <div class="bottom-container-card">
+                                <div class="shipping-info-container">
+                                    <img src="./assets/imgs/shipping.gif" alt=""
+                                        style="width: 30px; margin-right: 10px;">
+                                    <p class="shipping-info">FREE shipping</p>
+                                </div>
+                                <div class="guarantee-container">
+                                    <img src="./assets/imgs/varant-icon.png" alt="" width="40px">
+                                    <p class="shipping-info">180 Days Guarantee</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="decline-option">
-                        <p>By passing on this offer, you understand that <strong>you won't be given this special deal
-                                again.</strong></p>
-                        <button class="decline-btn">No, Thanks</button>
-                    </div>
+                </div>
+                <div class="decline-option">
+                    <p>By passing on this offer, you understand that <strong>you won't be given this special deal
+                            again.</strong></p>
+                    <button class="decline-btn"
+                        onclick="window.location.href='https://syzee.mycartpanda.com/ex-ocu/next-offer/8rj7Oz4j6N?accepted=no'">No,
+                        Thanks</button>
                 </div>
             </section>
 
@@ -340,73 +358,86 @@
             <!-- Final buttons -->
             <section class="final-buttons">
                 <div class="pricing-cards">
+                    <!-- Card de 2 frascos -->
                     <div class="pricing-card">
                         <div class="pricing-header">
                             <div class="save-badge">SAVE €98</div>
                         </div>
                         <div class="pricing-content">
-                            <img src="./assets/imgs/varant.png" alt="" class="varant-img" width="100px">
-                            <div class="right-price-content">
+                            <div class="middle-container-card">
+                                <img src="./assets/imgs/varant.png" alt="" class="varant-img" width="100px">
+                                <img src="./assets/imgs/2bottles.png" alt="" class="bottle2-image">
+                                <div class="price-container">
+                                    <div class="price">€147</div>
+                                    <div class="price-description">for 2 bottles</div>
+                                    <div class="original-price">Regular Price €245</div>
+                                    <button class="upgrade-btn" id="upgrade-2-bottles-final">
+                                        Yes! Upgrade My Order
+                                    </button>
+                                </div>
+                            </div>
 
-                                <img src="./assets/imgs/1.png" alt="">
-                                <img src="./assets/imgs/1.png" alt=""
-                                    style="position: absolute; top: 10px; left: 55px;">
-                                <div class="shipping-info-container" style="margin-top: 40px;"><img
-                                        src="./assets/imgs/shipping.gif" alt=""
-                                        style="width: 30px; margin-right: -20px;">
+                            <div class="bottom-container-card">
+                                <div class="shipping-info-container">
+                                    <img src="./assets/imgs/shipping.gif" alt=""
+                                        style="width: 30px; margin-right: 10px;">
                                     <p class="shipping-info">FREE shipping</p>
                                 </div>
-                            </div>
-                            <div class="left-price-content">
-                                <div class="price">€147</div>
-                                <div class="price-description">for 2 jars</div>
-                                <div class="original-price">Regular Price €245</div>
-                                <button class="upgrade-btn">Yes! Upgrade My Order</button>
-                                <div class="guarantee-container"><img src="./assets/imgs/varant-icon.png" alt=""
-                                        width="40px">
-                                    <p class="shipping-info" style="margin-right: 40px;">180 Days Guarantee</p>
+                                <div class="guarantee-container">
+                                    <img src="./assets/imgs/varant-icon.png" alt="" width="40px">
+                                    <p class="shipping-info">180 Days Guarantee</p>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
 
+                    <!-- Card de 6 frascos -->
                     <div class="pricing-card featured">
                         <div class="pricing-header">
                             <div class="save-badge">SAVE €196</div>
                         </div>
                         <div class="pricing-content">
-                            <img src="./assets/imgs/varant.png" alt="" class="varant-img" width="100px">
-                            <div class="right-price-content">
-                                <img src="./assets/imgs/2.png" alt="" style="margin-bottom: 40px; margin-right: 40px;">
-                                <img src="./assets/imgs/2.png" alt="" style="position: absolute; top: 60px;">
-                                <div class="shipping-info-container"><img src="./assets/imgs/shipping.gif" alt=""
-                                        style="width: 30px; margin-right: -20px;">
+                            <div class="middle-container-card">
+                                <img src="./assets/imgs/varant.png" alt="" class="varant-img" width="100px">
+                                <div class="right-price-content">
+                                    <img src="./assets/imgs/3.png" alt="" style="max-width: 250px;">
+                                </div>
+                                <div class="price-container">
+                                    <div class="price">€197</div>
+                                    <div class="price-description">for 6 bottles</div>
+                                    <div class="original-price">Regular Price €393</div>
+                                    <button class="upgrade-btn" id="upgrade-6-bottles-final">
+                                        Yes! Upgrade My Order
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="bottom-container-card">
+                                <div class="shipping-info-container">
+                                    <img src="./assets/imgs/shipping.gif" alt=""
+                                        style="width: 30px; margin-right: 10px;">
                                     <p class="shipping-info">FREE shipping</p>
                                 </div>
-                            </div>
-                            <div class="left-price-content">
-                                <div class="price">€197</div>
-                                <div class="price-description">for 6 bottles</div>
-                                <div class="original-price">Regular Price €393</div>
-                                <button class="upgrade-btn">Yes! Upgrade My Order</button>
-                                <div class="guarantee-container"><img src="./assets/imgs/varant-icon.png" alt=""
-                                        width="40px">
-                                    <p class="shipping-info" style="margin-right: 40px;">180 Days Guarantee</p>
+                                <div class="guarantee-container">
+                                    <img src="./assets/imgs/varant-icon.png" alt="" width="40px">
+                                    <p class="shipping-info">180 Days Guarantee</p>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
-                    <div class="decline-option">
-                        <p>By passing on this offer, you understand that <strong>you won't be given this special deal
-                                again.</strong></p>
-                        <button class="decline-btn">No, Thanks</button>
-                    </div>
+                </div>
+
+                <!-- Decline option -->
+                <div class="decline-option">
+                    <p>By passing on this offer, you understand that <strong>you won't be given this special deal
+                            again.</strong></p>
+                    <button class="decline-btn"
+                        onclick="window.location.href='https://syzee.mycartpanda.com/ex-ocu/next-offer/8rj7Oz4j6N?accepted=no'">
+                        No, Thanks
+                    </button>
                 </div>
             </section>
+
         </div>
     </main>
 
@@ -428,7 +459,6 @@
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 
