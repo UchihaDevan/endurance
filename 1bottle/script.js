@@ -194,7 +194,7 @@ class PageAnimations {
     }
 
     redirectToCheckout(option) {
-        window.location.href = `https://syzee.mycartpanda.com/ex-ocu/next-offer/8rj7Oz4j6N?accepted=yes`;
+        window.location.href = `https://syzee.mycartpanda.com/ex-ocu/next-offer/9PYDaNXjNM?accepted=yes`;
     }
 
     setupCardHoverEffects() {

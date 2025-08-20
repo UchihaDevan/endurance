@@ -194,7 +194,7 @@ class PageAnimations {
     }
 
     redirectToCheckout(option) {
-        window.location.href = `https://syzee.mycartpanda.com/ex-ocu/next-offer/8rj7Oz4j6N?accepted=yes`;
+        window.location.href = `https://syzee.mycartpanda.com/ex-ocu/next-offer/1qjorW4YJD?accepted=yes`;
     }
 
     setupCardHoverEffects() {
@@ -472,13 +472,6 @@ window.addEventListener('load', () => {
                 });
             }
         });
-    });
-
-    // Prevenir saída acidental da página
-    window.addEventListener('beforeunload', (e) => {
-        e.preventDefault();
-        e.returnValue = 'Are you sure you want to leave? Your special offer will be lost.';
-        return 'Are you sure you want to leave? Your special offer will be lost.';
     });
 });
 

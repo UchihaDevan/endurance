@@ -26,7 +26,7 @@ class CountdownTimer {
     updateDisplay() {
         const minutes = Math.floor(this.totalSeconds / 60);
         const seconds = this.totalSeconds % 60;
-
+        
         this.minutesElement.textContent = minutes.toString().padStart(2, '0');
         this.secondsElement.textContent = seconds.toString().padStart(2, '0');
     }
@@ -39,7 +39,17 @@ class CountdownTimer {
 
     showExpiredMessage() {
         const timerElement = document.querySelector('.timer');
-        timerElement.innerHTML = '<span style="color: #ff6b35; font-weight: bold;">00:00</span>';
+        timerElement.innerHTML = '<span style="color: #ff6b35; font-weight: bold;">TIME EXPIRED!</span>';
+    }
+
+    disableUpgradeButtons() {
+        const upgradeButtons = document.querySelectorAll('.upgrade-btn, .final-upgrade-btn');
+        upgradeButtons.forEach(button => {
+            button.disabled = true;
+            button.style.opacity = '0.5';
+            button.style.cursor = 'not-allowed';
+            button.textContent = 'Offer Expired';
+        });
     }
 }
 
@@ -73,7 +83,7 @@ class PageAnimations {
         const animatedElements = document.querySelectorAll(
             '.benefit-card, .pricing-card, .guarantee-item, .highlight-box, .bonus-content'
         );
-
+        
         animatedElements.forEach(el => {
             el.classList.add('animate-on-scroll');
             observer.observe(el);
@@ -82,7 +92,7 @@ class PageAnimations {
 
     setupButtonEffects() {
         const buttons = document.querySelectorAll('.upgrade-btn, .final-upgrade-btn');
-
+        
         buttons.forEach(button => {
             button.addEventListener('mouseenter', () => {
                 this.createRippleEffect(button);
@@ -115,16 +125,13 @@ class PageAnimations {
     handleUpgradeClick(e) {
         const button = e.target;
         const option = button.textContent.includes('€97') ? '2-bottles' : '6-bottles';
-
+        
         // Animação de sucesso
         this.showSuccessAnimation(button);
-
+        
         // Simular redirecionamento após animação
         setTimeout(() => {
             this.redirectToCheckout(option);
-
-            // Aqui você chama a funcionalidade do checkout da CartPanda após o tempo da animação
-            new OcuExternal(); // Ativa o checkout
         }, 1500);
     }
 
@@ -132,7 +139,7 @@ class PageAnimations {
         const originalText = button.textContent;
         button.textContent = 'Processing...';
         button.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
-
+        
         setTimeout(() => {
             button.textContent = '✓ Added to Order!';
         }, 1000);
@@ -140,7 +147,19 @@ class PageAnimations {
 
     handleDeclineClick() {
         // Mostrar modal de confirmação
-        window.location.href = './promotion.html';
+        this.showDeclineModal();
+    }
+
+    showDeclineModal() {
+        const modal = this.createModal(
+            'Are you sure?',
+            'You are about to lose this exclusive offer. This opportunity will not be available again.',
+            [
+                { text: 'Continue without Upgrade', action: () => this.redirectToCheckout('decline') },
+                { text: 'Back to Offer', action: () => this.closeModal() }
+            ]
+        );
+        document.body.appendChild(modal);
     }
 
     createModal(title, message, buttons) {
@@ -151,9 +170,9 @@ class PageAnimations {
                 <h3>${title}</h3>
                 <p>${message}</p>
                 <div class="modal-buttons">
-                    ${buttons.map((btn, index) =>
-            `<button class="modal-btn ${index === 0 ? 'secondary' : 'primary'}" data-action="${index}">${btn.text}</button>`
-        ).join('')}
+                    ${buttons.map((btn, index) => 
+                        `<button class="modal-btn ${index === 0 ? 'secondary' : 'primary'}" data-action="${index}">${btn.text}</button>`
+                    ).join('')}
                 </div>
             </div>
         `;
@@ -174,9 +193,13 @@ class PageAnimations {
         }
     }
 
+    redirectToCheckout(option) {
+        window.location.href = `https://syzee.mycartpanda.com/ex-ocu/next-offer/9PYDaNXjNM?accepted=yes`;
+    }
+
     setupCardHoverEffects() {
         const cards = document.querySelectorAll('.benefit-card, .pricing-card');
-
+        
         cards.forEach(card => {
             card.addEventListener('mouseenter', () => {
                 card.style.transform = 'translateY(-10px) scale(1.02)';
@@ -237,7 +260,7 @@ class Analytics {
                     position: this.getElementPosition(e.target)
                 });
             }
-
+            
             if (e.target.matches('.decline-btn')) {
                 this.trackEvent('decline_button_click', {
                     timestamp: new Date().toISOString()
@@ -252,10 +275,10 @@ class Analytics {
             data: data,
             timestamp: new Date().toISOString()
         };
-
+        
         this.events.push(event);
         console.log('Analytics Event:', event);
-
+        
         // Em um ambiente real, você enviaria isso para um serviço de analytics
         // this.sendToAnalytics(event);
     }
@@ -284,7 +307,7 @@ class PerformanceOptimizer {
 
     lazyLoadImages() {
         const images = document.querySelectorAll('img[data-src]');
-
+        
         const imageObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -298,7 +321,6 @@ class PerformanceOptimizer {
 
         images.forEach(img => imageObserver.observe(img));
     }
-
 
 }
 
@@ -450,6 +472,13 @@ window.addEventListener('load', () => {
                 });
             }
         });
+    });
+
+    // Prevenir saída acidental da página
+    window.addEventListener('beforeunload', (e) => {
+        e.preventDefault();
+        e.returnValue = 'Are you sure you want to leave? Your special offer will be lost.';
+        return 'Are you sure you want to leave? Your special offer will be lost.';
     });
 });
 
